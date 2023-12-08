@@ -3,6 +3,7 @@
 class Card {
     constructor(person){
         this.person = person;
+        this.string = "CAPS"
     };
 
     //Get card as HTML
@@ -13,49 +14,48 @@ class Card {
             <header>
               <p class="rank">${this.person.Rank}</p>
               <h1>${this.person.FirstName} ${this.person.LastName}</h1>
-              <p class="type">Wizard</p>
+              <p class="type">${this.person.Type}</p>
               <div class="right">
-                <p class="hp">60</p>
-                <p class="department">Computer Science</p>
+                <p class="hp">HP: ${this.person.HitPoints}</p>
+                <p class="department">${this.person.Department}</p>
               </div>
             </header>
             <div class="cardbody">
               <div class="imgWrapper">
-                <p class="degree">PHD</p>
-                <img src="images/headshots/casey_Kenan.jpg" alt="" />
+                <p class="degree">${this.person.EducationLevel}</p>
+                <img src="images/headshots/${this.person.FirstName.toLowerCase()}_${this.person.LastName.toLowerCase()}.jpg" alt="${person.FirstName} ${person.LastName}" />
                 <div class="info">
-                  <p id="id">1</p>
-                  <p id="Nickname">Dad Joke</p>
-                  <p id="height">5'6"</p>
-                  <p class="weight">200lbs</p>
+                  <p id="id">${this.person.id}</p>
+                  <p id="Nickname">${this.person.NickName}</p>
+                  <p id="height">${this.person.Height}</p>
                 </div>
               </div>
   
               <div class="stats">
                 <div class="costWrapper">
-                  <p class="cost">Cost: 7</p>
+                  <p class="cost">Cost: ${this.person.Cost}</p>
                   <i class=""></i>
                 </div>
-                <p class="stamina">Stamina: Low</p>
+                <p class="stamina">Stamina: ${this.person.Stamina}</p>
               </div>
               <div class="attackWrapper">
                 <div class="attack">
-                  <p>Indescirmate Dad Joke</p>
-                  <p class="damage">62</p>
+                  <p>${this.person.Attack1}</p>
+                  <p class="damage">${this.person.Attack1Damage}</p>
                 </div>
                 <div class="attack">
-                  <p>Ignorant Slag</p>
-                  <p class="damage">74</p>
+                  <p>${this.person.Attack2}</p>
+                  <p class="damage">${this.person.Attack2Damage}</p>
                 </div>
               </div>
               <div class="resWeakWrapper">
                 <div class="resWeak">
                   <h3>Resistances</h3>
-                  <p>Children, Whining</p>
+                  <p>${this.person.Resistances}</p>
                 </div>
                 <div class="resWeak">
                   <h3>Weakenesses</h3>
-                  <p>Grading homework, Comic Sans, Chapel</p>
+                  <p>${this.person.Weaknesses}</p>
                 </div>
               </div>
             </div>
@@ -64,8 +64,8 @@ class Card {
                 <i class=""></i>
                 <p>2023</p>
               </div>
-              <p class="hashtag">#CodeHard</p>
-              <p class="creator">Kenan Casey</p>
+              <p class="hashtag">${this.person.HashTag}</p>
+              <p class="creator">${this.person.Creator}</p>
             </footer>
           </div>
         </div>`
