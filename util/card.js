@@ -23,7 +23,7 @@ class Card {
             <div class="cardbody">
               <div class="imgWrapper">
                 <p class="degree">${this.person.EducationLevel}</p>
-                <img src="images/headshots/${this.person.FirstName.toLowerCase()}_${this.person.LastName.toLowerCase()}.jpg" alt="${person.FirstName} ${person.LastName}" />
+                <img src="images/headshots/${this.person.LastName.toLowerCase()}_${this.person.FirstName.toLowerCase()}.jpg" alt="${person.FirstName} ${person.LastName}" />
                 <div class="info">
                   <p id="id">${this.person.id}</p>
                   <p id="Nickname">${this.person.NickName}</p>
