@@ -4,3 +4,12 @@
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
 }
+
+body {
+    display: flex;
+    background-color: #eee;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
