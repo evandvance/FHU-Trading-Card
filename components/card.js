@@ -20,7 +20,7 @@ class Card {
             <div class="cardbody">
               <div class="imgWrapper">
                 <p class="degree">${this.person.EducationLevel}</p>
-                <img src="images/headshots/${this.person.LastName.toLowerCase()}_${this.person.FirstName.toLowerCase()}.jpg" alt="${this.person.FirstName} ${this.person.LastName}" />
+                <img src="https://fhu-faculty-api.netlify.app/images/headshots/${this.person.Image}" alt="${this.person.FirstName} ${this.person.LastName}" />
                 <div class="info">
                   <p id="id">${this.person.id}</p>
                   <p id="Nickname">${this.person.NickName}</p>
