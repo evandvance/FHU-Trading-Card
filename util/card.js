@@ -1,9 +1,6 @@
-
-
 class Card {
     constructor(person){
         this.person = person;
-        this.string = "CAPS"
     };
 
     //Get card as HTML
@@ -23,7 +20,7 @@ class Card {
             <div class="cardbody">
               <div class="imgWrapper">
                 <p class="degree">${this.person.EducationLevel}</p>
-                <img src="images/headshots/${this.person.LastName.toLowerCase()}_${this.person.FirstName.toLowerCase()}.jpg" alt="${person.FirstName} ${person.LastName}" />
+                <img src="images/headshots/${this.person.LastName.toLowerCase()}_${this.person.FirstName.toLowerCase()}.jpg" alt="${this.person.FirstName} ${this.person.LastName}" />
                 <div class="info">
                   <p id="id">${this.person.id}</p>
                   <p id="Nickname">${this.person.NickName}</p>
@@ -68,7 +65,7 @@ class Card {
               <p class="creator">${this.person.Creator}</p>
             </footer>
           </div>
-        </div>`
+        </div>`;
     }
 
     //Construct Card with 'better' methods
