@@ -8,7 +8,9 @@
 body {
     display: flex;
     background-color: #222;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: center;
     flex-wrap: wrap;
+    padding: 50px;
 }

@@ -1,4 +1,12 @@
 .card {
     display: flex;
     background-color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+    height: 30em;
+    width: 20em;
+}
+
+img {
+    width: 10em;
 }
