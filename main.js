@@ -1,6 +1,5 @@
-import {Card} from '/util/card.js'
+import {Card} from '/componenets/card.js'
 // const APIURL = 'https://fhu-trading-card-edv.netlify.app/FHU-faculty-api.json';
-// const APIURL = 'https://127.0.0.1:5500/FHU-faculty-api.json'
 const APIURL = 'FHU-faculty-api.json'
 
 async function addAllCards(){
