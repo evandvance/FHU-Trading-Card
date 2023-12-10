@@ -1,7 +1,8 @@
 .card {
-    background-color: #eee;
+    background-color: #171717;
     color: #eee;
     padding: .5em;
+    border: 2px solid black;
     border-radius: 1em;
     height: 32em;
     width: 22em;
@@ -11,6 +12,7 @@
 .card .cardWrapper {
     flex-direction: column;
     border-radius: .5em;
+    border: 2px solid #eee;
     width: 100%;
 }
 
@@ -18,7 +20,6 @@
     font-size: small;
     display: flex;
     justify-content: space-between;
-    border: 2px solid #eee;
     border-radius: .5em;
     padding: 5px;
 }
@@ -52,4 +53,49 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.card .stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.card .attackWrapper {
+    display: flex;
+    height: 5em;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 5px 10px 5px;
+    border-top: 2px solid #eee;
+}
+
+.card .attack {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3em;
+}
+
+.card .resWeakWrapper {
+    display: flex;
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+}
+
+.card .resWeak {
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 5px;
+}
+
+.card .resWeak:nth-child(1) {
+    border-right: 2px solid #eee;
+}
+
+.card footer {
+    display: flex;
+    height: 2.8em;
+    justify-content: space-around;
+    align-items: flex-end;
 }
