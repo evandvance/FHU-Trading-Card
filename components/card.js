@@ -1,4 +1,4 @@
-import { HTMLBuilder } from "/componenets/HTMLBuilder";
+import { HTMLBuilder } from "/components/HTMLBuilder.js"
 
 class Card extends HTMLBuilder{
 
@@ -37,6 +37,7 @@ class Card extends HTMLBuilder{
   }
 
     constructor(person){
+        super()
         this.person = person;
         this.#innerHTML = `<!-- Template Card for writting CSS and then JS in the future -->
           <div class="cardWrapper">
