@@ -1,4 +1,6 @@
-class Card {
+import { HTMLBuilder } from "./HTMLBuilder";
+
+class Card extends HTMLBuilder{
 
   #innerHTML
   #backgroundColors = {
