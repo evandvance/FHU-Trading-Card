@@ -109,7 +109,6 @@ class Card{
       const carCard = document.createElement('li');
       carCard.appendChild(this.makeCard());
       carCard.className = 'carouselItem'
-      carCard.dataTarget = 'card';
       return carCard;
     }
 

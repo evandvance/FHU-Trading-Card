@@ -1,4 +1,3 @@
-import {Card} from '/components/card.js';
 import { Carousel } from './components/carousel.js';
 
 const APIURL = 'https://fhu-faculty-api.netlify.app/fhu-faculty.json';
