@@ -25,5 +25,5 @@ async function addFirstCard(){
     document.body.appendChild(card.makeCard());
 }
 
-// addAllCards();
-addFirstCard();
+addAllCards();
+// addFirstCard();
