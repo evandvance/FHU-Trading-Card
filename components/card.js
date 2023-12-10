@@ -107,10 +107,9 @@ class Card{
     //Construct Card for Carousel
     makeCarouselCard() {
       const carCard = document.createElement('li');
-      carCard.innerHTML = this.#innerHTML;
-      carCard.className = 'card';
+      carCard.appendChild(this.makeCard());
+      carCard.className = 'carouselItem'
       carCard.dataTarget = 'card';
-      carCard.style.backgroundImage = `linear-gradient(to top, #171717, ${this.#backgroundColors[this.person.FieldofStudy]}`;
       return carCard;
     }
 

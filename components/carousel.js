@@ -21,14 +21,12 @@ class Carousel{
         carousel.className = 'carousel';
         wrapper.className = 'wrapper';
         buttonWrapper.className = 'buttonWrapper';
-
-        // Assign Data Actions to buttons
-        lbutton.dataAction = 'slideLeft';
-        rbutton.dataAction = 'slideRight';
+        lbutton.className = 'slideLeft';
+        rbutton.className = 'slideRight';
 
         //Add Text to buttons
-        lbutton.textContent = 'Left';
-        rbutton.textContent = 'Right';
+        lbutton.textContent = '>';
+        rbutton.textContent = '<';
 
         // Loop through person in peoples array and create cards from their data
         this.#peoples.forEach(person => {
@@ -37,6 +35,8 @@ class Carousel{
         });
 
         wrapper.appendChild(carousel);
+        wrapper.appendChild(lbutton)
+        wrapper.appendChild(rbutton)
         console.log(wrapper);
         return wrapper;
     }
