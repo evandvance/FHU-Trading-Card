@@ -6,10 +6,5 @@
 }
 
 body {
-    display: flex;
     background-color: #eee;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-top: 50px;
 }

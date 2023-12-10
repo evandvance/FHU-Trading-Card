@@ -1,0 +1,26 @@
+.wrapper {
+    height: 40em;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+.button-wrapper {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+  }
+
+.carousel {
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: all 1s ease;
+  }

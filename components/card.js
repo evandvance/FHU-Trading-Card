@@ -1,6 +1,4 @@
-import { HTMLBuilder } from "/components/HTMLBuilder.js";
-
-class Card extends HTMLBuilder{
+class Card{
 
   #innerHTML;
   #backgroundColors = {
@@ -37,7 +35,6 @@ class Card extends HTMLBuilder{
   };
 
     constructor(person){
-        super()
         this.person = person;
         this.#innerHTML = `<!-- Template Card for writting CSS and then JS in the future -->
           <div class="cardWrapper">
@@ -105,6 +102,16 @@ class Card extends HTMLBuilder{
       cardHTML.className = 'card'
       cardHTML.style.backgroundImage = `linear-gradient(to top, #171717, ${this.#backgroundColors[this.person.FieldofStudy]}`;
       return cardHTML;
+    }
+
+    //Construct Card for Carousel
+    makeCarouselCard() {
+      const carCard = document.createElement('li');
+      carCard.innerHTML = this.#innerHTML;
+      carCard.className = 'card';
+      carCard.dataTarget = 'card';
+      carCard.style.backgroundImage = `linear-gradient(to top, #171717, ${this.#backgroundColors[this.person.FieldofStudy]}`;
+      return carCard;
     }
 
 }
