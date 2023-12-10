@@ -1,12 +1,33 @@
 .card {
     display: flex;
     background-color: #eee;
-    padding: 10px;
-    border-radius: 10px;
+    padding: .5em;
+    border-radius: 1em;
     height: 30em;
     width: 20em;
+    border: 2px solid red;
 }
 
-img {
+.card .cardWrapper {
+    border-radius: .5em;
+    border: 2px solid red;
+}
+.card header {
+    border: 2px solid purple;
+}
+.card .cardBody {
+    border: 2px solid red;
+}
+
+.card .imgWrapper {
+    border: 2px solid blue;
+}
+.card .info {
+    border: 2px solid red;
+}
+.card .stats {
+    border: 2px solid red;
+}
+.card img {
     width: 10em;
 }

@@ -7,10 +7,9 @@
 
 body {
     display: flex;
-    background-color: #222;
-    justify-content: space-around;
-    align-items: stretch;
-    align-content: center;
+    /* background-color: #222; */
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    padding: 50px;
+    padding-top: 100px;
 }

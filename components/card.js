@@ -1,12 +1,42 @@
 class Card {
+
+  #innerHTML
+  #backgroundColors = {
+    "Mathematics" : "#172554",
+    "Science" : "#064e3",
+    "Computer Science" : "#166534",
+    "Engineering" : "#0c4a6e",
+    "Bible" : "#3b0764",
+    "Political Science" : "#1f2937",
+    "Business" : "#22d3ee",
+    "Buisness" : "#22d3ee",
+    "Marketing" : "#22d3ee",
+    "Theatre" : "#fde047",
+    "Sociology" : "#831843",
+    "Photography" : "#f87171",
+    "History" : "#78716c",
+    "Cybersecurity" : "#450a0a",
+    "Nursing" : "#1e1b4b",
+    "Education" : "#fef08a",
+    "Law" : "#4a044e",
+    "Spanish" : "#c2410c",
+    "English" : "#d97706",
+    "Spanish Education" : "#c2410c",
+    "Graphic Design" : "#059669",
+    "Choral Music" : "#3f6212",
+    "Communications" : "#22d3ee",
+    "Psychology" : "#86198f",
+    "Academics" : "#fef08a",
+    "Kinesiology" : "#991b1b",
+    "Biochemistry" : "#064e3b",
+    "Music" : "#3f6212",
+    "" : "#71717a",
+    "Philosophy" : "#3b0764"
+  }
+
     constructor(person){
         this.person = person;
-    };
-
-    //Get card as HTML
-    get innerHTML() {
-        return `<!-- Template Card for writting CSS and then JS in the future -->
-        <div class="card">
+        this.#innerHTML = `<!-- Template Card for writting CSS and then JS in the future -->
           <div class="cardWrapper">
             <header>
               <p class="rank">${this.person.Rank}</p>
@@ -17,7 +47,7 @@ class Card {
                 <p class="department">${this.person.Department}</p>
               </div>
             </header>
-            <div class="cardbody">
+            <div class="cardBody">
               <div class="imgWrapper">
                 <p class="degree">${this.person.EducationLevel}</p>
                 <img src="https://fhu-faculty-api.netlify.app/images/headshots/${this.person.Image}" alt="${this.person.FirstName} ${this.person.LastName}" />
@@ -64,13 +94,16 @@ class Card {
               <p class="hashtag">${this.person.HashTag}</p>
               <p class="creator">${this.person.Creator}</p>
             </footer>
-          </div>
-        </div>`;
-    }
+          </div>`;
+    };
 
-    //Construct Card with 'better' methods
+    //Construct Card
     makeCard() {
-        return;
+      const cardHTML = document.createElement('div');
+      cardHTML.innerHTML = this.#innerHTML;
+      cardHTML.className = 'card'
+      cardHTML.style.backgroundColor = this.#backgroundColors[this.person.FeildofStudy]
+      return cardHTML;
     }
 
 }

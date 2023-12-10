@@ -9,11 +9,9 @@ async function addAllCards(){
     const peoples = await response.json();
 
     //Loop through items from API and create cards
-    peoples.forEach(element => {
-        const card = new Card(element);
-        const cardHTML = document.createElement('div');
-        cardHTML.innerHTML = card.innerHTML;
-        document.body.appendChild(cardHTML);
+    peoples.forEach(person => {
+        const card = new Card(person);
+        document.body.appendChild(card.makeCard());
     });
 }
 
@@ -24,9 +22,7 @@ async function addFirstCard(){
     const peoples = await response.json();
 
     const card = new Card(peoples[0]);
-        const cardHTML = document.createElement('div');
-        cardHTML.innerHTML = card.innerHTML;
-        document.body.appendChild(cardHTML);
+    document.body.appendChild(card.makeCard());
 }
 
 // addAllCards();
