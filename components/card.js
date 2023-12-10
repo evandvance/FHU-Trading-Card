@@ -64,7 +64,6 @@ class Card extends HTMLBuilder{
               <div class="stats">
                 <div class="costWrapper">
                   <p class="cost">Cost: ${this.person.Cost}</p>
-                  <i class=""></i>
                 </div>
                 <p class="stamina">Stamina: ${this.person.Stamina}</p>
               </div>
@@ -110,6 +109,4 @@ class Card extends HTMLBuilder{
 
 }
 
-
-// fa-solid fa-certificate
 export {Card};
