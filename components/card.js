@@ -1,4 +1,4 @@
-import { HTMLBuilder } from "/components/HTMLBuilder";
+import { HTMLBuilder } from "./HTMLBuilder";
 
 class Card extends HTMLBuilder{
 
