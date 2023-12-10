@@ -8,3 +8,8 @@
 body {
     background-color: #eee;
 }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
