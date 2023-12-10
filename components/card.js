@@ -39,23 +39,23 @@ class Card {
         this.#innerHTML = `<!-- Template Card for writting CSS and then JS in the future -->
           <div class="cardWrapper">
             <header>
-              <p class="rank">${this.person.Rank}</p>
-              <h1>${this.person.FirstName} ${this.person.LastName}</h1>
+              <div class="left">
+                <p class="rank">${this.person.Rank}</p>
+                <h1>${this.person.FirstName} ${this.person.LastName}</h1>
+              </div>
               <p class="type">${this.person.Type}</p>
               <div class="right">
                 <p class="hp">HP: ${this.person.HitPoints}</p>
-                <p class="department">${this.person.Department}</p>
+                <p class="department">${this.person.FieldofStudy}</p>
               </div>
             </header>
+
             <div class="cardBody">
               <div class="imgWrapper">
-                <p class="degree">${this.person.EducationLevel}</p>
                 <img src="https://fhu-faculty-api.netlify.app/images/headshots/${this.person.Image}" alt="${this.person.FirstName} ${this.person.LastName}" />
-                <div class="info">
-                  <p id="id">${this.person.id}</p>
-                  <p id="Nickname">${this.person.NickName}</p>
-                  <p id="height">${this.person.Height}</p>
-                </div>
+              </div>
+              <div class="info">
+                ${this.person.id} | ${this.person.NickName} | ${this.person.Height}
               </div>
   
               <div class="stats">
@@ -102,7 +102,7 @@ class Card {
       const cardHTML = document.createElement('div');
       cardHTML.innerHTML = this.#innerHTML;
       cardHTML.className = 'card'
-      cardHTML.style.backgroundColor = this.#backgroundColors[this.person.FeildofStudy]
+      cardHTML.style.backgroundImage = `linear-gradient(to top, #171717, ${this.#backgroundColors[this.person.FieldofStudy]}`
       return cardHTML;
     }
 
