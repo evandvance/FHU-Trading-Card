@@ -1,8 +1,8 @@
-import { HTMLBuilder } from "/components/HTMLBuilder.js"
+import { HTMLBuilder } from "/components/HTMLBuilder.js";
 
 class Card extends HTMLBuilder{
 
-  #innerHTML
+  #innerHTML;
   #backgroundColors = {
     "Mathematics" : "#172554",
     "Science" : "#064e3",
@@ -34,7 +34,7 @@ class Card extends HTMLBuilder{
     "Music" : "#3f6212",
     "" : "#71717a",
     "Philosophy" : "#3b0764"
-  }
+  };
 
     constructor(person){
         super()
@@ -105,7 +105,7 @@ class Card extends HTMLBuilder{
       const cardHTML = document.createElement('div');
       cardHTML.innerHTML = this.#innerHTML;
       cardHTML.className = 'card'
-      cardHTML.style.backgroundImage = `linear-gradient(to top, #171717, ${this.#backgroundColors[this.person.FieldofStudy]}`
+      cardHTML.style.backgroundImage = `linear-gradient(to top, #171717, ${this.#backgroundColors[this.person.FieldofStudy]}`;
       return cardHTML;
     }
 
