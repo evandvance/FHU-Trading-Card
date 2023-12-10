@@ -19,7 +19,7 @@ class Card extends HTMLBuilder{
     "History" : "#78716c",
     "Cybersecurity" : "#450a0a",
     "Nursing" : "#1e1b4b",
-    "Education" : "#fef08a",
+    "Education" : "#ff00ff",
     "Law" : "#4a044e",
     "Spanish" : "#c2410c",
     "English" : "#d97706",
@@ -28,7 +28,7 @@ class Card extends HTMLBuilder{
     "Choral Music" : "#3f6212",
     "Communications" : "#22d3ee",
     "Psychology" : "#86198f",
-    "Academics" : "#fef08a",
+    "Academics" : "#ff00ff",
     "Kinesiology" : "#991b1b",
     "Biochemistry" : "#064e3b",
     "Music" : "#3f6212",
@@ -91,11 +91,10 @@ class Card extends HTMLBuilder{
             </div>
             <footer>
               <div class="iconWrapper">
-                <i class=""></i>
+                <i class="fa-solid fa-copyright"></i>
                 <p>2023</p>
               </div>
               <p class="hashtag">${this.person.HashTag}</p>
-              <p class="creator">${this.person.Creator}</p>
             </footer>
           </div>`;
     };
@@ -111,4 +110,6 @@ class Card extends HTMLBuilder{
 
 }
 
+
+// fa-solid fa-certificate
 export {Card};

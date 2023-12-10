@@ -15,15 +15,5 @@ async function addAllCards(){
     });
 }
 
-// Function for adding first card for CSS Dev
-async function addFirstCard(){
-    //Load Data
-    const response = await fetch(APIURL);
-    const peoples = await response.json();
-
-    const card = new Card(peoples[0]);
-    document.body.appendChild(card.makeCard());
-}
-
+//Load all cards into the page
 addAllCards();
-// addFirstCard();
