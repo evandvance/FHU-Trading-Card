@@ -12,4 +12,6 @@ const API_URL = 'https://fhu-faculty-api.netlify.app/fhu-faculty.json';
     const carousel = new Carousel(peoples);
     document.querySelector('.container').appendChild(carousel.renderCarousel())
 
+    //Initilize Carousel 
+    carousel.update();
 })();

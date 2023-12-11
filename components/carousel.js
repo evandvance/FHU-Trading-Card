@@ -2,42 +2,41 @@ import { Card } from '/components/card.js'
 
 class Carousel{
 
-    #focusIndex;
     #cardArray;
 
     constructor(array_of_people){
         this.#cardArray = array_of_people.map((person) => new Card(person))
-        this.#focusIndex = Math.floor(this.#cardArray.length/2);
+        this.focusIndex = Math.floor(this.#cardArray.length/2);
     }
 
-    #update() {
+    update() {
         let windowWidth = window.innerWidth;
         console.log(windowWidth);
-        const length = 59;
 
-        this.#cardArray.forEach( (div, index) => {
+        const crslItems = document.querySelectorAll('.crslItem');
+
+        crslItems.forEach( (div, index) => {
         
-            if( index < activeIndex){
-                div.classList.remove("active");
+            if( index < this.focusIndex){
+                div.classList.remove('focus');
                 
                 div.style.zIndex = index;
-                const offset = 100+(length-index);
+                const offset = 100+(this.#cardArray.length-index);
                 div.style.transform = `translateX(-${offset}%) scale(100%)`;
                
             }
-            else if(index === activeIndex)
+            else if(index === this.focusIndex)
             {
-                div.classList.add("active");
+                div.classList.add("focus");
                 div.style.zIndex = 300;
                 div.style.transform = `translateX(0) scale(120%)`;
       
             }
             else {
-                div.classList.remove("active");
-                div.style.zIndex = (length - index);
+                div.classList.remove("focus");
+                div.style.zIndex = (this.#cardArray.length - index);
                 const offset = 100+(index);
                 div.style.transform = `translateX(${offset}%) scale(100%)`;
-      
             }
         });
     
@@ -77,15 +76,16 @@ class Carousel{
 
         //Adding event listeners to buttons
         prev.addEventListener('click',() =>{
-            if(this.#focusIndex <= 0){
-                this.#focusIndex--;
-                this.#update();
+            console.log(this.focusIndex);
+            if(this.focusIndex > 0){
+                this.focusIndex -= 1;
+                this.update();
             }
         });
         next.addEventListener('click', () => {
-            if (this.#focusIndex > this.#cardArray.length){
-                this.#focusIndex++;
-                this.#update();
+            if (this.focusIndex < this.#cardArray.length){
+                this.focusIndex += 1;
+                this.update();
             }
         })
 
