@@ -2,17 +2,22 @@ import { Card } from '/components/card.js'
 
 class Carousel{
 
-    #innerHTML;
-    #peoples;
+    #focusIndex;
+    #cardArray;
 
     constructor(array_of_people){
-        this.#peoples = array_of_people;
+        this.#cardArray = array_of_people.map((person) => new Card(person))
+        this.#focusIndex = Math.floor(this.#cardArray.length/2);
     }
 
-    makeCarousel(){
+    update() {
+
+    }
+
+    renderCarousel(){
         // Create all elements of finished carousel
         const wrapper = document.createElement('div');
-        const carousel = document.createElement('ul');
+        const carousel = document.createElement('div');
         const buttonWrapper = document.createElement('div');
         const lbutton = document.createElement('button');
         const rbutton = document.createElement('button');
@@ -21,22 +26,20 @@ class Carousel{
         carousel.className = 'carousel';
         wrapper.className = 'wrapper';
         buttonWrapper.className = 'buttonWrapper';
-        lbutton.className = 'slideLeft';
-        rbutton.className = 'slideRight';
+        lbutton.className = 'lbutton';
+        rbutton.className = 'rbutton';
 
         //Add Text to buttons
         lbutton.textContent = '>';
         rbutton.textContent = '<';
 
-        // Loop through person in peoples array and create cards from their data
-        this.#peoples.forEach(person => {
-            const card = new Card(person);
-            carousel.appendChild(card.makeCarouselCard());
-        });
+        //Loop through cards and get HTML for rendering Carousel
+        this.#cardArray.forEach(card => carousel.appendChild(card.renderCard()))
 
+        //Append in order of apearence 
+        wrapper.appendChild(lbutton);
         wrapper.appendChild(carousel);
-        wrapper.appendChild(lbutton)
-        wrapper.appendChild(rbutton)
+        wrapper.appendChild(rbutton);
         console.log(wrapper);
         return wrapper;
     }

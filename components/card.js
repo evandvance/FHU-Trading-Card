@@ -36,6 +36,7 @@ class Card{
 
     constructor(person){
         this.person = person;
+        this.isLiked = false; 
         this.#innerHTML = `<!-- Template Card for writting CSS and then JS in the future -->
           <div class="cardWrapper">
             <header>
@@ -96,20 +97,12 @@ class Card{
     };
 
     //Construct Card
-    makeCard() {
+    renderCard() {
       const cardHTML = document.createElement('div');
       cardHTML.innerHTML = this.#innerHTML;
       cardHTML.className = 'card'
       cardHTML.style.backgroundImage = `linear-gradient(to top, #171717, ${this.#backgroundColors[this.person.FieldofStudy]}`;
       return cardHTML;
-    }
-
-    //Construct Card for Carousel
-    makeCarouselCard() {
-      const carCard = document.createElement('li');
-      carCard.appendChild(this.makeCard());
-      carCard.className = 'carouselItem'
-      return carCard;
     }
 
 }
