@@ -10,9 +10,6 @@ class Carousel{
     }
 
     update() {
-        let windowWidth = window.innerWidth;
-        console.log(windowWidth);
-
         const crslItems = document.querySelectorAll('.crslItem');
 
         crslItems.forEach( (div, index) => {
