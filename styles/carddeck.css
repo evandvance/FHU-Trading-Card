@@ -18,7 +18,7 @@
     font-size: 4em;
 }
 
-.cardDeckWrapper i {
+.cardDeckWrapper .btn i {
     color: #222;
 }
 
