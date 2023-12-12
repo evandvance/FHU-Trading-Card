@@ -34,7 +34,7 @@ class CardDeck {
     }
 
     #addCardToDeck(){
-        if (this.#cardDeck.length > 9){
+        if (this.#cardDeck.length >= 9){
             return;
         }
         const selectCard = this.#cardArray[this.#focusIndex];
