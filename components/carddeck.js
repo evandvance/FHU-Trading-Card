@@ -40,8 +40,8 @@ class CardDeck {
         const selectCard = this.#cardArray[this.#focusIndex];
         if (this.#cardDeck.includes(selectCard) === false){
             this.#cardDeck.push(selectCard);
-            const cardDeck = document.querySelector('.deck');
-            cardDeck.appendChild(this.#cardArray[this.#focusIndex].renderCard());
+            document.querySelector('.deck').appendChild(this.#cardArray[this.#focusIndex].renderCard());
+            document.querySelector('.deckHeader').textContent = `Card Deck  ${this.#cardDeck.length}/9: `
         } else {
             alert('Card already in Deck')
         }
@@ -84,7 +84,7 @@ class CardDeck {
         addToDeckIcon.className = 'fa-solid fa-plus fa-2xl';
         likeIcon.className = 'fa-regular fa-heart fa-2xl';
 
-        deckHeader.textContent = 'Card Deck : '
+        deckHeader.textContent = 'Card Deck  0/9: '
 
         //Add Event Listeners
         addToDeck.addEventListener('click', ()=> this.#addCardToDeck())
