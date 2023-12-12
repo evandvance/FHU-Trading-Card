@@ -9,6 +9,10 @@ class Carousel{
         this.focusIndex = Math.floor(this.#cardArray.length/2);
     }
 
+    getCardArray(){
+        return this.#cardArray;
+    }
+
     update() {
         const crslItems = document.querySelectorAll('.crslItem');
 
@@ -73,16 +77,17 @@ class Carousel{
 
         //Adding event listeners to buttons
         prev.addEventListener('click',() =>{
-            console.log(this.focusIndex);
             if(this.focusIndex > 0){
                 this.focusIndex -= 1;
                 this.update();
+                console.log(this.focusIndex)
             }
         });
         next.addEventListener('click', () => {
-            if (this.focusIndex < this.#cardArray.length){
+            if (this.focusIndex < this.#cardArray.length-1){
                 this.focusIndex += 1;
                 this.update();
+                console.log(this.focusIndex)
             }
         })
 

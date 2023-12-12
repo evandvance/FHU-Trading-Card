@@ -1,0 +1,41 @@
+.cardDeckWrapper {
+    width: 100%;
+}
+
+.cardDeckBtns {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 3em;
+}
+
+.cardDeckBtns .btn:hover {
+    cursor: pointer;
+    transform: scale(115%);
+}
+
+.cardDeckBtns .fa-plus {
+    font-size: 4em;
+}
+
+.cardDeckWrapper i {
+    color: #222;
+}
+
+.cardDeck {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.deckHeader {
+    font-size: xx-large;
+}
+
+.deck {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 40rem;
   width: 100%;
   padding: 2rem;
 }
@@ -26,7 +26,7 @@
 
 #prevBtn:hover, #prevBtn:active, #nextBtn:hover, #nextBtn:active
 {
-    transform: scale(115%);
+  transform: scale(115%);
 }
 
 .carousel {
